@@ -1,0 +1,66 @@
+<!-- 
+    Event Handling :  
+    click 
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+   <table border="1">
+    <tr>
+        <td colspan="3">
+            <input type="text" id="data">
+        </td>
+    </tr>
+    <tr>
+        <td><button onclick="getInput(1)">1</button></td>
+        <td><button onclick="getInput(2)">2</button></td>
+        <td><button onclick="getInput(3)">3</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="getInput(4)">4</button></td>
+        <td><button onclick="getInput(5)">5</button></td>
+        <td><button onclick="getInput(6)">6</button></td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="getInput(this.value)">7</button></td>
+        <td><button onclick="getInput(8)">8</button></td>
+        <td><button onclick="getInput(9)">9</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="getInput(0)">0</button></td>
+        <td><button onclick="getInput('+')">+</button></td>
+        <td><button onclick="getInput('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="getInput('*')">*</button></td>
+        <td><button onclick="getInput('/')">/</button></td>
+        <td><button onclick="calculate()">=</button></td>
+    </tr>
+    <tr>
+        <td colspan="3"><button onclick="clear1()">clear</button></td>
+    </tr>
+   </table>
+
+   <script>
+    function getInput(val){
+        //console.log(val);
+        //document.getElementById("data").value =  document.getElementById("data").value + val;
+        //a = a + 10
+        // a += 10
+        document.getElementById("data").value += val;
+    }
+    function calculate(){
+        document.getElementById("data").value = eval(document.getElementById("data").value);
+    }
+    function clear1(){
+        document.getElementById("data").value = "";
+    }
+   </script>
+</body>
+ </html>
